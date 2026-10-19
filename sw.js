@@ -1,9 +1,16 @@
-/* Shadow Boxing service worker: offline-first with background refresh */
-const CACHE = 'shadow-boxing-v1';
+/* Shadow Boxing service worker: offline-first with background refresh.
+   When any file of the app changes, bump CACHE so every device downloads the new set. */
+const CACHE = 'shadow-boxing-v2';
 const ASSETS = [
   './',
   './index.html',
+  './styles.css',
+  './content.js',
+  './app.js',
   './manifest.webmanifest',
+  './fonts/big-shoulders-display-latin.woff2',
+  './fonts/noto-sans-georgian-latin.woff2',
+  './fonts/noto-sans-georgian-georgian.woff2',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/maskable-512.png',
